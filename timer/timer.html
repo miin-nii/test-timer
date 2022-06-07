@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background: radial-gradient(96.74% 276.79% at 3.59% 5.28%, #F0F4FF 0%, #A5B6EE 100%);
+            width: 100%;
+            height: 100vh;
+        }
+        .img-logo {
+            display: block;
+            width: 244px;
+            height: 48px;
+            margin: 72px auto 60px;
+        }
+        .cont {
+            width: 400px;
+            background: linear-gradient(144.07deg, #5572BB 2.13%, #374B7C 102.97%);
+            box-shadow: 20px 20px 60px 10px rgba(55, 75, 124, 0.4);
+            border-radius: 16px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        .cont h2 {
+            font-family: 'Pretendard';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            text-align: center;
+            color: #FFFFFF;
+            margin: 48px 0 23px;
+        }
+        dl {
+            margin: 0 58px;
+        }
+        dl div {
+            display: inline-block;
+            /* margin: 0 8px; */
+        }
+        dl .tit-time {
+            font-family: 'Pretendard';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 14px;
+            text-align: center;
+            color: #A5B6EE;
+        }
+        .time {
+            background: linear-gradient(314.28deg, #304577 0%, #4C65A0 83%);
+            border: 1px solid #354971;
+            border-radius: 4px;
+            width: 80px;
+            height: 80px;
+            text-align: center;
+        }
+        footer img {
+            display: block;
+            width: 104px;
+            margin: 60px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1><img class="img-logo" src="img/weniv-logo.png" alt=""></h1>
+    <section class="cont">
+        <h2>TIMER</h2>
+        <dl>
+            <div>
+                <dt class="tit-time">HRS</dt>
+                <dd><input id="hrs" class="time hrs" type="text"></dd>
+            </div>
+            <div>
+                <dt class="tit-time">MIN</dt>
+                <dd><input id="min" class="time min" type="text"></dd>
+            </div>
+            <div>
+                <dt class="tit-time">SEC</dt>
+                <dd><input id="sec" class="time sec" type="text"></dd>
+            </div>
+        </dl>
+        <button class="start">
+            <img src="" alt="">
+        </button>
+        <button class="reset">
+            <img src="" alt="">
+        </button>
+    </section>
+    <footer>
+        <img src="img/ⓒ WENIV Corp..png" alt="">
+    </footer>
+
+    <script>
+        const hrs = document.getElementById('hrs');
+        const min = document.getElementById('min');
+        const sec = document.getElementById('sec')
+
+        let seconds = "10"
+        
+        sec.value = seconds;
+
+
+        function timer(){
+            play = setInterval(function() {
+                seconds -= 1;
+            }, 1000)
+        }
+        timer();
+    </script>
+</body>
+</html>
